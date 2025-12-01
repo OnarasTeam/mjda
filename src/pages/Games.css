@@ -1,0 +1,89 @@
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0; /* keep inputs and button tight together */
+    border-radius: 10px;
+    /* keep a transparent border to prevent layout shift when focusing */
+    border: 2px solid transparent;
+    overflow: hidden; /* clip children corners to match parent radii */
+}
+
+.filter img {
+    width: 90px;
+    height: 90px;
+    border-radius: 0 10px 10px 0;
+    display: block;
+    transition: filter 160ms ease, transform 160ms ease;
+    object-fit: cover;
+}
+
+.filter button {
+    padding: 0;
+    margin: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 160ms ease, transform 120ms ease, box-shadow 160ms ease;
+    cursor: pointer;
+}
+
+.filter input {
+    padding: 0 12px;
+    width: 400px;
+    font-size: 1.5em;
+    height: 90px;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--background-color);
+    border: none;
+}
+
+.filter button:hover {
+    transform: translateY(-3px);
+}
+
+
+.filter button:hover img {
+    filter: brightness(1.25) saturate(0.85);
+}
+
+/* Remove native outline on input and button; we'll show focused state on parent */
+.filter input:focus,
+.filter button:focus {
+    outline: none;
+}
+
+/* Show focus style only when the input is focused (ignore button focus). Uses :has(), supported in modern browsers. */
+.filter:has(input:focus) {
+    border-color: var(--primary-color-light); /* show focus color */
+    box-shadow: 0 0 0 2px rgba(43,125,240,0.08);
+}
+
+/* Make sure the border doesn't change layout (box-sizing helps) */
+.filter,
+.filter * {
+    box-sizing: border-box;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    gap: 40px;
+    align-items: start;
+    padding: 24px;
+    min-height: 500px;
+    min-width: 1000px;
+}
+
+.card {
+    justify-content: center;
+
+    background-color: var(--primary-color-darker);
+    width: 200px;
+    height: 100px;
+}

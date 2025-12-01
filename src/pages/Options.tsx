@@ -17,7 +17,7 @@ export default function OptionsPage() {
           <h1>{t('key.games')}</h1>
           <p>{t('key.gamesDescription')}</p>
           <div>
-            <button>{t('key.games')}</button>
+            <button onClick={() => nav('/games')}>{t('key.games')}</button>
           </div>
         </div>
         <div className='card'>
