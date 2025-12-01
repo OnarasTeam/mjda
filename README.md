@@ -1,4 +1,4 @@
-# PBS-Frontend
+# Frontend
 
 A modern React + TypeScript frontend template built with Vite and optimized with SWC. Features internationalization (i18n), ESLint + Prettier configuration, and ready-to-deploy scripts.
 
@@ -965,3 +965,5 @@ This project is open source and available under the MIT License.
 ---
 
 **README Structure:** From basic getting started → project overview → daily usage → deployment → advanced topics
+
+
