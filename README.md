@@ -965,5 +965,3 @@ This project is open source and available under the MIT License.
 ---
 
 **README Structure:** From basic getting started → project overview → daily usage → deployment → advanced topics
-
-

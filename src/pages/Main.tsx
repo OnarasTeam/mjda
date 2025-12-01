@@ -1,33 +1,29 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '/vite.svg'
 import { useTranslation } from 'react-i18next'
+import mjdaLogo from '../assets/mjda.png'
+import arrowDown from '../assets/icons/arrow_downward.svg'
+
+import WordSplitter from '../components/WordSplitter'
 import './Main.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function MainPage() {
-  const [count, setCount] = useState(0)
-  const [t] = useTranslation()
+  const { t } = useTranslation()
+  const nav = useNavigate()
 
   return (
     <>
-      <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
+      <div className='card title-card'>
+        <div className='title-container'>
+          <img src={mjdaLogo} className='main-logo' />
+          <h1>
+            <WordSplitter text={t('main.welcome')} wordsPerLine={2} />
+          </h1>
+        </div>
+        <h2>{t('main.description')}</h2>
       </div>
-      <h1>Vite + React</h1>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>
-          {t('count-text')} {count}
-        </button>
-        <p>
-          {t('text.edit')} <code>src/App.tsx</code> {t('text.save_hmt')}
-        </p>
-      </div>
-      <p className='read-the-docs'>{t('footer')}</p>
+      <button onClick={() => nav('options')}>
+        <img src={arrowDown}></img>
+      </button>
     </>
   )
 }

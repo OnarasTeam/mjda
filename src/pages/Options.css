@@ -1,0 +1,27 @@
+.element-continer {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    flex-direction: column;
+    justify-content: start;
+    width: 40vw;
+    height: 60vh;
+
+    p {
+        align-content: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 1.5rem;
+        flex-grow: 2;
+    }
+    
+    div {
+        flex-grow: 1;
+        align-content: center;
+    }
+    
+}

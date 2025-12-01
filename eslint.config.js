@@ -19,8 +19,7 @@ export default defineConfig([
         ecmaFeatures: { jsx: true },
       },
     },
-    plugins: {
-    },
+    plugins: {},
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
