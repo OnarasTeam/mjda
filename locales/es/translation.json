@@ -1,6 +1,13 @@
 {
+    "key": {
+        "games": "Juegos",
+        "votes": "Votaciones",
+        "awards": "Premios",
+        "gamesDescription": "Descubre y juega a los mejores juegos seleccionados del año. Participa en votaciones y diviértete con títulos destacados en la comunidad de gamers.",
+        "awardsDescription": "Explora los premios otorgados a los juegos más destacados. Celebra los logros y reconoce la excelencia en la industria de los videojuegos."
+    },
     "main": {
         "welcome": "Melhores Jogos Do Ano",
-        "description": "Este es el sitio web oficial de MJDA :D."
+        "description": "Descubre los MJDA 2025 y vota por tus juegos favoritos del año."
     }
 }
