@@ -14,10 +14,31 @@ export default function GamesPage() {
       id: 'b',
       name: 'nameB',
     },
+    {
+      id: 'c',
+      name: 'nameC',
+    },
+    {
+      id: 'd',
+      name: 'nameD',
+    },
+    {
+      id: 'e',
+      name: 'nameE',
+    },
+    {
+      id: 'f',
+      name: 'nameF',
+    },
   ]
 
   return (
     <>
+      <div className='header'>
+        <img src={mjdaLogo} className='main-logo' alt='mjda logo' />
+        <>Juegos</a>
+        <a>Premios</a>
+      </div>
       <div className='filter'>
         <input
           aria-label='search games'
@@ -25,7 +46,6 @@ export default function GamesPage() {
           value={filter}
           onChange={(e) => setFilter(e.currentTarget.value)}
         />
-        <img src={mjdaLogo} className='main-logo' alt='mjda logo' />
       </div>
       <div className='content'>
         {games
