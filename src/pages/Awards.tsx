@@ -2,33 +2,33 @@ import { useState } from 'react'
 import './Games.css'
 import Header from '../components/Header'
 
-export default function GamesPage() {
+export default function AwardsPage() {
   const [filter, setFilter] = useState<string>('')
 
   const games = [
     {
       id: 'a',
-      name: 'nameA',
+      name: 'premioA',
     },
     {
       id: 'b',
-      name: 'nameB',
+      name: 'premioB',
     },
     {
       id: 'c',
-      name: 'nameC',
+      name: 'premioC',
     },
     {
       id: 'd',
-      name: 'nameD',
+      name: 'premioD',
     },
     {
       id: 'e',
-      name: 'nameE',
+      name: 'premioE',
     },
     {
       id: 'f',
-      name: 'nameF',
+      name: 'premioF',
     },
   ]
 
@@ -37,8 +37,8 @@ export default function GamesPage() {
       <Header />
       <input
         className='filter'
-        aria-label='search games'
-        placeholder='Buscar juegos'
+        aria-label='search awards'
+        placeholder='Buscar premios'
         value={filter}
         onChange={(e) => setFilter(e.currentTarget.value)}
       />
